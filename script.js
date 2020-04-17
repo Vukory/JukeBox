@@ -6,16 +6,13 @@ const classicalMusic = [
 ];
 
 const alternativeMusic = [
-    { src: 'PLUnZiuKlRo9mxP52lqHoMqO1hC48gPTlQ', title: 'Nightstep' },
+    { src: 'PLUnZiuKlRo9lZMYehOv49ogrn6O9w6HMd', title: 'Nightstep' },
     { src: 'PLUnZiuKlRo9loiN8103ldXrNy8kCYUCts', title: 'Fantasy' }
 ];
 
-let jukebox;
 let music = [...classicalMusic, ...alternativeMusic];
 
-document.addEventListener('load', () => {
-    generateButtons();
-})
+generateButtons();
 
 function generateButtons() {
     const jukebox = document.getElementById('jukebox');
@@ -26,6 +23,7 @@ function generateButtons() {
 
         element.innerText = button.title;
         element.addEventListener('click', () => embedPlaylist(button.src));
+
         jukebox.appendChild(element);
     }
 }
