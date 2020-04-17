@@ -4,25 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
     <link rel="stylesheet" href="styles.css">
     <title>JukeBox</title>
 </head>
 
 <body>
-    <class class="content">
+    <div class="content">
 
-        <div class="Boxcontainer">
-            <div class="jukebox">
-                <button type="button" onclick="embedPlaylist('PLUnZiuKlRo9lzhcHvz6EwANqpGHHCKCge');" id="classical">Classical</button>
-                <button type="button" onclick="embedPlaylist('PLUnZiuKlRo9nWGwjcAKxGn_rk1rwsxOr6');" id="orchestral">Orchestral</button>
-                <button type="button" onclick="embedPlaylist('PLUnZiuKlRo9mxP52lqHoMqO1hC48gPTlQ');" id="nightstep">Nightstep</button>
-                <button type="button" onclick="embedPlaylist('PLUnZiuKlRo9loiN8103ldXrNy8kCYUCts');" id="fantasy">Fantasy</button>
+        <div class="boxContainer">
+            <div class="checkboxes">
+                <input type="checkbox" id="classical_check" checked onchange="selectCheckbox(event);">
+                <label for="classical_check">Classical Music</label>
+                <input type="checkbox" id="alternative_check" checked onchange="selectCheckbox(event);">
+                <label for="alternative_check">Alternative Music</label>
+            </div>
+            <div id="jukebox">
+
             </div>
             <div class="videoContainer" id="player"></div>
         </div>
-    </class>
 
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
